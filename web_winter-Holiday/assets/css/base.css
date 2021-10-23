@@ -1,0 +1,199 @@
+:root{
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --border-color: #dbdbdb;
+    --primary-color: #3FD0D4;
+    --height-header: 80px;
+}
+*{
+    box-sizing: inherit; /*Kế thừa từ thẻ chứa nó (kế thừa cả box-sizing)*/
+}
+html{  /*Html là thẻ to  nhất trong file html*/
+    font-size: 62.5%; /*Đưa cái này vào <==> 1rem= 10px*/
+    line-height: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+.nav__search-overlay{
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(77, 223, 228, 0.8);
+    display: none;
+}
+.header-search-box{
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 930px;
+    max-width: 930px;
+    display: none;
+}
+.header-search-input2{
+    height: 80px;
+    flex: 2;
+    outline: none;
+    border: none;
+    padding-left: 27px;
+    font-size: 16px;
+    
+}
+.header-search-button{
+    height: 80px;
+    flex: 1;
+    border: none;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    font-weight: 600;
+    font-size: 18px;
+}
+.header-search-button:hover{
+   opacity: 0.8;
+   cursor: pointer;
+}
+.header-search-close{
+    position: absolute;
+    right: 38px;
+    top: 20px;
+    font-size: 37px;
+    color: var(--white-color);
+    cursor: pointer;
+}
+#header-search-input:checked ~  .nav__search-overlay{
+    display: block;
+}
+#header-search-input:checked ~  .header-search-box{
+    display: flex;
+}
+@keyframes spread{
+    from{
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    to{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+@keyframes un-spread{
+    from{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    to{
+        transform: scaleY(0);
+        opacity: 0;
+    }
+}
+
+@keyframes un-button-animation{
+    from{
+        background-color: #3cadb1;
+    }
+    to{
+        background-color: var(--primary-color);
+    }
+}
+
+@keyframes button-animation{
+    from{
+        background-color: var(--primary-color);
+    }
+    to{
+        background-color: #3cadb1;
+    }
+}
+
+@keyframes slider-animation{
+    0%{
+        transform: scale(1, 1);
+    }
+    50%{
+        transform: scale(1.02, 1.02);
+
+    }
+    100%{
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes un-text-animation{
+    from{
+        color: #3cadb1;
+    }
+    to{
+        color: var(--primary-color);
+    }
+}
+
+@keyframes text-animation{
+    from{
+        color: var(--primary-color);
+    }
+    to{
+        color: #3cadb1;
+    }
+}
+
+@keyframes slide-up-4px{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-4px);
+    }
+}
+
+@keyframes slide-down-4px{
+    from{
+        transform: translateY(-4px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+@keyframes Achievement-up{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes Achievement-down{
+    from{
+        transform: translateY(-100%);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+@keyframes img-animation{
+    from{
+        transform: scale(1, 1);
+    }
+    to{
+        transform: scale(1.05, 1.05);
+    }
+}
+
+@keyframes un-img-animation{
+    from{
+        transform: scale(1.05, 1.05);
+    }
+    to{
+        transform: scale(1, 1);
+    }
+}
+
